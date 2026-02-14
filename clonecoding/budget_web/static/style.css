@@ -1,0 +1,177 @@
+/* style.css - 스타일링 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+/* 입력 섹션 */
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.input-section select,
+.input-section input,
+.input-section button {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.input-section select {
+    flex: 1;
+}
+
+.input-section input[type="number"] {
+    flex: 2;
+}
+
+.input-section input[type="text"] {
+    flex: 3;
+}
+
+.input-section button {
+    flex: 1;
+    background: #667eea;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.input-section button:hover {
+    background: #5568d3;
+}
+
+/* 잔액 섹션 */
+.balance-section {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.balance-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+.balance-item span:first-child {
+    color: #666;
+}
+
+.income {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.expense {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.balance {
+    color: #667eea;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* 거래 내역 */
+.records-section h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+#recordsList {
+    list-style: none;
+}
+
+#recordsList li {
+    background: #f8f9fa;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+#recordsList li:hover {
+    transform: translateX(5px);
+}
+
+.record-info {
+    flex: 1;
+}
+
+.record-type {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.record-type.income {
+    background: #d4edda;
+    color: #155724;
+}
+
+.record-type.expense {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
+
+.empty-message {
+    text-align: center;
+    color: #999;
+    padding: 30px;
+}

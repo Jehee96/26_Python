@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가계부📃</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>💰가계부💰</h1>
+
+        <!-- 입력 폼 -->
+         <div class="input-section">
+            <select id="type">
+                <option value="수입">수입</option>
+                <option value="지출">지출</option>
+            </select>
+            <input type="number" id="amount" placeholder="금액" min="0">
+            <input type="text" id="memo" placeholder="내용">
+            <button onclick="addRecord()">추가</button>
+         </div>
+
+         <!-- 잔액 정보 -->
+          <div class="balance-section">
+            <div class="balance-item">
+                <span>총 수입</span>
+                <span id="totalIncome" class="income">0원</span>
+            </div>
+                <div class="balance-item">
+                <span>총 지출</span>
+                <span id="totalExpense" class="expense">0원</span>
+            </div>
+            <div class="balance-item">
+                <span>잔액</span>
+                <span id="balance" class="balance">0원</span>
+            </div>
+          </div>
+
+          <!-- 거래 내역 -->
+          <div class="records-section">
+            <h2>거래 내역</h2>
+            <ul id="recordsList"></ul>
+          </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js')}}"></script>
+</body>
+</html>
